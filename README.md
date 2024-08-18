@@ -1,12 +1,11 @@
-# ChatWTF
-
-This is a ChatGPT-like chatbot that uses the ChatGPT API. It was created for my YouTube channel. You can find the playlist of videos [here](https://www.youtube.com/watch?v=ru5m-BKDn6E&list=PLz8w2NTEwxvqH7yCAp6PAL0dKeiVU7uv4).
-
 ## Quick Start
 
 1. Clone the repository
-2. Add your OpenAI API key to `settings.php` (see `settings.sample.php`)
-3. Start a server
+2. Clone the Backend Python Flask App in this repository "https://github.com/sc23mm/MSc-project-Backend". Make sure you are running this backend. 
+3. Get the server ip address of Backend running (eg "http://127.0.0.1:5000/predict").
+4. Put the ip address in the `chatbotFrontEnd/assets/js/script.js` line 107 
+3. This is optional Add your OpenAI API key to `settings.php` (see `settings.sample.php`) 
+4. Start a server `php -S localhost:8080`
 
 ```console
 $ php -S localhost:8080
@@ -23,20 +22,6 @@ $ sudo docker run -p 8080:80 chatwtf
 
 Note: If you get `caught SIGWINCH, shutting down gracefully`, add the `-d` flag to run it in the background.
 
-## Database
-
-The chatbot uses PHP sessions to store the conversations by default. You can also use an SQL database. There is a SQLite dump and a MySQL dump in the `db` folder. You can install the SQLite version by running the `install_sqlite.php` script.
-
-Database config has to be put into `settings.php` (see `settings.sample.php`). You need to also change `storage_type` to `sql` in the settings in order to use a database.
-
 ## API key
 
 You will need an API key from OpenAI to use the code. The API key must be added to the `settings.sample.php` file, which you will need to rename to `settings.php`.
-
-## Modify to your liking
-
-You can change the system message in the settings to make the chatbot do what you want.
-
-## Support
-
-If you like this code or use it in some useful way, consider buying me a coffee: https://www.buymeacoffee.com/unconv
