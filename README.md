@@ -13,14 +13,6 @@ $ php -S localhost:8080
 
 4. Go to http://localhost:8080
 
-## Docker
-
-```console
-$ sudo docker build -t chatwtf .
-$ sudo docker run -p 8080:80 chatwtf
-```
-
-Note: If you get `caught SIGWINCH, shutting down gracefully`, add the `-d` flag to run it in the background.
 
 ## API key
 
